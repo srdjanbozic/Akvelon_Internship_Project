@@ -31,6 +31,7 @@ Functional capabilities of the project
 - Ability to create/ view / modify / remove tasks - Basic CRUD operations
 - Ability to add and remove tasks from a project 
 - Ability to view all tasks in the project
+
 Non functional requirments
 -
 - The project was built using a three-layer architecture - Data Access Layer, Logic Layer and Representation Layer.
@@ -39,6 +40,7 @@ Non functional requirments
 - Data annotations are used to validate models.
 - Code First Approach for mapping entity models into tabels in database - ORM
 - Unit tests are used to validate the entire logic.
+
 Techonology
 -
 - .NET 6 (Version 6.0.8)
@@ -46,6 +48,7 @@ Techonology
 - Microsoft SQL Server Management Studio 18
 - Swagger Ui for automated API documentation
 - Docker
+
 Other installed dependencies
 -
 - Entity Framework Core Tools (Version 6.0.8)
