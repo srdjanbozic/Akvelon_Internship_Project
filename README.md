@@ -195,6 +195,7 @@ This endpoint removes a single task with specified Id from the database.
 ## Unit Tests
 - I used the Xunit framework to test the logic of my application.
 - To test this project, I had to mock certain functionalities as well as use an in memory database to mock the database context.
+
 Project Controller Tests are as following:
 - 
 - Get_All_Projects_ReturnsTasks - should return all projects from db and check if number of project is right
@@ -206,6 +207,7 @@ Project Controller Tests are as following:
 - GetById_UnknownGuidPassed_ReturnsNotEqual - based on non existing Id, should return not found status code
 - GetById_UnknownIdPassed_ReturnsEqual - based on existing Id, should return status code No Content and check if Id is equal to specified Id
 - UpdateById_KnownIdPassed_CreatedAtActionResult - create new object, update specified field and check if filed is UpdateById_KnownIdPassed_CreatedAtActionResult
+
 Task Controller Tests are as following :
 -
 - Get_All_Task_ReturnsTasks - should return all tesks from db and check if number of tesk is right
