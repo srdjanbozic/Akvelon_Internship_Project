@@ -76,6 +76,7 @@ Other installed dependencies
 ## Installation
 In order to run my Web Api project, you have to follow next steps:
 -
+
 - Before getting the code, check if you have installed Visual Studio 2022 (https://visualstudio.microsoft.com/vs/) and Microsoft SQL Server Management Studio 18 (https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
 - Download zip file from Github (by clicking on green button "Code") or clone it directly into IDE.
 - Open project in Visual studio 2022
