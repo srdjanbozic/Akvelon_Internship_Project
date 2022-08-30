@@ -1,0 +1,431 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Akvelon Internship Project Task",
+    "description": "ASP.NET Core Web API project",
+    "contact": {
+      "name": " Linkedin Profile",
+      "url": "https://www.linkedin.com/in/srdjan-bozic-b560b6231/"
+    },
+    "license": {
+      "name": "License = GNU General Public License v2.0",
+      "url": "https://github.com/srdjanbozic/Internship_Tasks/blob/Test_Task_Akvelon_Internship/LICENSE"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Project": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Returns all the projects from the database",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully returning all projects.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Project"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "500": {
+            "description": "Something is wrong with the server."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Adds new project to the database",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Project"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully added project to the database."
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "500": {
+            "description": "Something is wrong with the server."
+          }
+        }
+      }
+    },
+    "/api/Project/{id}": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Returns the project with specified Id from the database",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully returning specified project.",
+            "schema": {
+              "$ref": "#/definitions/Project"
+            }
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "500": {
+            "description": "Something is wrong with the server."
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Update the project with specifed Id in the database",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Project"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully updated project."
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "500": {
+            "description": "Something is wrong with the server."
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Deletes project by Id from the database",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully deleted project."
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "500": {
+            "description": "Something is wrong with the server."
+          }
+        }
+      }
+    },
+    "/api/Task": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Returns all the tasks from the database",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully returning all tasks.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Task"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "500": {
+            "description": "Something is wrong with the server."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Adds new task to the database",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully added task to the database."
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "500": {
+            "description": "Something is wrong with the server."
+          }
+        }
+      }
+    },
+    "/api/Task/{id}": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Returns the task with specified Id from the database",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully returning specified task.",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "500": {
+            "description": "Something is wrong with the server."
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Update the task with specifed Id in the database",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully updated task."
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "500": {
+            "description": "Something is wrong with the server."
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Deletes specified task from the database",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully deleted task."
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "500": {
+            "description": "Something is wrong with the server."
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Project": {
+      "required": [
+        "priority",
+        "projectName",
+        "startDate"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "projectName": {
+          "maxLength": 50,
+          "minLength": 0,
+          "type": "string"
+        },
+        "startDate": {
+          "format": "date",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/ProjectStatus"
+        },
+        "priority": {
+          "format": "int32",
+          "maximum": 5,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "completionDate": {
+          "format": "date",
+          "type": "string"
+        },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Task"
+          },
+          "readOnly": true
+        }
+      }
+    },
+    "ProjectStatus": {
+      "format": "int32",
+      "enum": [
+        1,
+        2,
+        3
+      ],
+      "type": "integer"
+    },
+    "Task": {
+      "required": [
+        "taskName",
+        "taskPriority"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "taskName": {
+          "maxLength": 50,
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/TaskStatus"
+        },
+        "taskPriority": {
+          "format": "int32",
+          "maximum": 5,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "projectId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "taskDescription": {
+          "maxLength": 500,
+          "minLength": 0,
+          "type": "string"
+        }
+      }
+    },
+    "TaskStatus": {
+      "format": "int32",
+      "enum": [
+        1,
+        2,
+        3
+      ],
+      "type": "integer"
+    }
+  }
+}
